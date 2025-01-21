@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
 import { AppComponent } from './app.component';
+import { MatButtonModule } from '@angular/material/button';
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
 @NgModule({
@@ -11,7 +12,8 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatButtonModule
+    MatButtonModule,
+    BrowserAnimationsModule
   ],
   providers: [
     provideClientHydration()
@@ -19,6 +21,4 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
   bootstrap: [AppComponent]
 })
 
-export class AppModule {
-
- }
+export class AppModule {}
