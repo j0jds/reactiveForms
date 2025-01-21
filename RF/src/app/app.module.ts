@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { MatButtonModule } from '@angular/material/button';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
@@ -12,7 +11,6 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatButtonModule,
     BrowserAnimationsModule
   ],
   providers: [
