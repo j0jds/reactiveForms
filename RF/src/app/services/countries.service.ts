@@ -1,6 +1,8 @@
+import { ICountry } from '../interfaces/countries-response/country.interface';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs';
+import { map, Observable } from 'rxjs';
+import { ICountriesResponse } from '../interfaces/countries-response/countries-response.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -12,9 +14,9 @@ export class CountriesService {
     private readonly _httpClient: HttpClient
   ) {}
 
-  getCountries() {
+  getCountries(): Observable<ICountry[]> {
     // Método para buscar os países na API.
-    return this._httpClient.get<any>('https://countriesnow.space/api/v0.1/countries').pipe(
+    return this._httpClient.get<ICountriesResponse>('https://countriesnow.space/api/v0.1/countries').pipe(
         /** O operador map serve para simplificar o acesso aos dados do endpoint. Aqui ele extrai apenas o objeto data ao invés de
         pegar todas as outras informações que seriam necessárias para o projeto. */  
         map((countriesResponse) => {
