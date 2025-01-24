@@ -1,9 +1,9 @@
-import { IUser } from "../interfaces/user/user.interface";
 import { Observable } from "rxjs";
 import { Injectable } from "@angular/core";
 import { PhoneTypeEnum } from "../enums/phone-type.enum";
 import { AddressTypeEnum } from "../enums/address-type.enum";
 import { MaritalStatusEnum } from "../enums/marital-status.enum";
+import { UsersListResponse } from "../interfaces/user/user-list-response.interface";
 
 @Injectable({
     providedIn: 'root'
@@ -11,7 +11,7 @@ import { MaritalStatusEnum } from "../enums/marital-status.enum";
 
 export class UsersService {
 
-    private readonly usersList: IUser[] = [
+    private readonly usersList: UsersListResponse = [
         {
             name: 'Fulano',
             email: 'fulano@hotmail.com',
@@ -143,7 +143,7 @@ export class UsersService {
         }
     ];
 
-    getUsers() {
+    getUsers(): Observable<UsersListResponse>{
         return new Observable((observer) => {
             setTimeout(() => {
                 observer.next(this.usersList);
