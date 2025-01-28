@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 import { PhoneTypeEnum } from "../enums/phone-type.enum";
 import { AddressTypeEnum } from "../enums/address-type.enum";
 import { MaritalStatusEnum } from "../enums/marital-status.enum";
-import { UsersListResponse } from "../interfaces/user/user-list-response.interface";
+import { UsersListResponse } from "../types/user-list-response.interface";
 
 @Injectable({
     providedIn: 'root'
