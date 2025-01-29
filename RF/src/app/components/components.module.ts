@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { PipesModule } from "../pipes/pipes.module";
 import { UsersListComponent } from './users-list/users-list.component';
 import { AngularMaterialModule } from "../angular-material/angular-material.module";
+import { CommonModule } from "@angular/common";
 
 @NgModule({
     declarations: [    
@@ -9,7 +10,8 @@ import { AngularMaterialModule } from "../angular-material/angular-material.modu
   ],
     imports: [
         AngularMaterialModule,
-        PipesModule
+        PipesModule,
+        CommonModule
     ],
     exports: [
       UsersListComponent
