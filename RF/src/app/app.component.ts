@@ -1,7 +1,7 @@
 import { UsersService } from './services/users.service';
-import { StatesService } from './services/states.service';
-import { CitiesService } from './services/cities.service';
-import { CountriesService } from './services/countries.service';
+// import { StatesService } from './services/states.service';
+// import { CitiesService } from './services/cities.service';
+// import { CountriesService } from './services/countries.service';
 import { Component, OnInit } from '@angular/core';
 import { UsersListResponse } from './types/user-list-response.interface';
 import { take } from 'rxjs';
@@ -14,6 +14,7 @@ import { take } from 'rxjs';
 
 export class AppComponent implements OnInit {
     usersList: UsersListResponse = [];
+    currentTabIndex: number = 0;
 
   constructor(
     // private readonly _countriesService: CountriesService,

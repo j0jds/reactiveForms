@@ -11,7 +11,7 @@ import { CommonModule } from "@angular/common";
     imports: [
         AngularMaterialModule,
         PipesModule,
-        CommonModule
+        CommonModule,
     ],
     exports: [
       UsersListComponent
