@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { ComponentsModule } from "./components/components.module";
 import { AngularMaterialModule } from './angular-material/angular-material.module';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
@@ -13,14 +14,15 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
+    ComponentsModule,
+    HttpClientModule,
     AngularMaterialModule,
-    ComponentsModule
+    BrowserAnimationsModule,
 ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
