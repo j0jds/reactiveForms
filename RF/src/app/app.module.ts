@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { ComponentsModule } from "./components/components.module";
 import { AngularMaterialModule } from './angular-material/angular-material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
@@ -16,13 +17,12 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
     AppRoutingModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
-  ],
+    ComponentsModule
+],
   providers: [
     provideClientHydration()
   ],
   bootstrap: [AppComponent]
 })
 
-export class AppModule {
-  
-}
+export class AppModule {}
