@@ -1,37 +1,19 @@
 <div class="p-4  bg-indigo-800">
     <div class="p-4 bg-black">
         <div class="p-4 grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-            <app-user-info-item title="Nome" [text]="'Joel'"></app-user-info-item>
-            <div>
-                <p class="text-xl font-semibold">Email:</p>
-                <p class="text-lg">{{ 'joel@hotmail.com' }}</p>
-            </div>
+            <app-user-info-item title="Nome" [text]="user?.name"></app-user-info-item>
+            <app-user-info-item title="Email" [text]="user?.email"></app-user-info-item>
         </div>
         
         <div class="p-4 grid gap-2 sm:grid-cols-3">
-            <div>
-                <p class="text-xl font-semibold">País:</p>
-                <p class="text-lg">Brasil</p>
-            </div>
-            <div>
-                <p class="text-xl font-semibold">Estado:</p>
-                <p class="text-lg">Pernambuco</p>
-            </div>
+            <app-user-info-item title="País" [text]="user?.country"></app-user-info-item>
+            <app-user-info-item title="Estado" [text]="user?.state"></app-user-info-item>
         </div>
 
         <div class="p-4 grid gap-2 sm:grid-cols-3">
-            <div>
-                <p class="text-xl font-semibold">Estado Civil:</p>
-                <p class="text-lg">Solteiro</p>
-            </div>
-            <div>
-                <p class="text-xl font-semibold">Renda Mensal:</p>
-                <p class="text-lg">R$ 5000,00</p>
-            </div>
-            <div>
-                <p class="text-xl font-semibold">Data de Nascimento:</p>
-                <p class="text-lg">08/07/1972</p>
-            </div>
+            <app-user-info-item title="Estado Civil" [text]="user?.maritalStatus?.toString()"></app-user-info-item>
+            <app-user-info-item title="Renda Mensal" [text]="user?.monthlyIncome?.toString()"></app-user-info-item>
+            <app-user-info-item title="Data de Nascimento" [text]="user?.birthDate"></app-user-info-item>
         </div>
     </div>
 </div>
