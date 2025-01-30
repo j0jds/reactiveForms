@@ -7,6 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 
 export class UserInfoItemComponent {
-  @Input() title: string = '';
-  @Input() text: string = '';
+  @Input() title: string | undefined | null = '';
+  @Input() text: string | undefined | null = '';
 }
