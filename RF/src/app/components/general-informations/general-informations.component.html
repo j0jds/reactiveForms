@@ -1,17 +1,14 @@
 <div class="p-4  bg-indigo-800">
-    <div class="p-4 bg-white">
-        <div class="p-4 grid lg:grid-cols-3">
-            <div>
-                <p class="text-xl font-semibold">Nome:</p>
-                <p class="text-lg">Joel</p>
-            </div>
+    <div class="p-4 bg-black">
+        <div class="p-4 grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+            <app-user-info-item title="Nome" [text]="'Joel'"></app-user-info-item>
             <div>
                 <p class="text-xl font-semibold">Email:</p>
                 <p class="text-lg">{{ 'joel@hotmail.com' }}</p>
             </div>
         </div>
         
-        <div class="p-4 grid lg:grid-cols-3">
+        <div class="p-4 grid gap-2 sm:grid-cols-3">
             <div>
                 <p class="text-xl font-semibold">País:</p>
                 <p class="text-lg">Brasil</p>
@@ -22,7 +19,7 @@
             </div>
         </div>
 
-        <div class="p-4 grid lg:grid-cols-3">
+        <div class="p-4 grid gap-2 sm:grid-cols-3">
             <div>
                 <p class="text-xl font-semibold">Estado Civil:</p>
                 <p class="text-lg">Solteiro</p>
