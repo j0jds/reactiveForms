@@ -1,4 +1,4 @@
-  <div class="p-4 max-w-screen-xl mx-auto my-10 bg-gradient-to-b from-yellow-950 to-indigo-950">
+  <div class="p-4 max-w-screen-xl mx-auto my-10 bg-gradient-to-b from-yellow-300 to-indigo-300">
     <mat-card>
       <mat-card-content>
         <app-users-list [usersList]="usersList"></app-users-list>
@@ -7,7 +7,9 @@
             <mat-tab label="Geral">
               <app-general-informations [user]="usersList[0]"></app-general-informations>
             </mat-tab>
-            <mat-tab label="Contato">CONTATO</mat-tab>
+            <mat-tab label="Contato">
+              <app-contacts></app-contacts>
+            </mat-tab>
             <mat-tab label="Dependente">DEPENDENTE</mat-tab>
           </mat-tab-group>
         </div>
