@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { PipesModule } from "../pipes/pipes.module";
 import { CommonModule } from "@angular/common";
+import { ContactsComponent } from './contacts/contacts.component';
 import { UsersListComponent } from './users-list/users-list.component';
 import { UserInfoItemComponent } from './user-info-item/user-info-item.component';
 import { AngularMaterialModule } from "../angular-material/angular-material.module";
@@ -8,9 +9,10 @@ import { GeneralInformationsComponent } from './general-informations/general-inf
 
 @NgModule({
     declarations: [    
+      ContactsComponent,
       UsersListComponent, 
       UserInfoItemComponent,
-      GeneralInformationsComponent, 
+      GeneralInformationsComponent,
   ],
     imports: [
         AngularMaterialModule,
@@ -18,8 +20,9 @@ import { GeneralInformationsComponent } from './general-informations/general-inf
         CommonModule,
     ],
     exports: [
+      ContactsComponent,
       UsersListComponent,
-      GeneralInformationsComponent
+      GeneralInformationsComponent,
     ],
 })
 
